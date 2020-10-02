@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: development
+---
+spring:
+  profiles: development
+  security:
+    user:
+      password: changethis
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: "*"
+---
+spring:
+  profiles: cloud
+  jpa:
+    hibernate:
+      ddl-auto: update
